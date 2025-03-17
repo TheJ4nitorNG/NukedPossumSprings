@@ -1,0 +1,62 @@
+{
+    "nodes": [
+        {
+            "id": "node_001",
+            "speaker": "Olivia",
+            "text": "Welcome to the ruins of Possum Springs. Need anything?",
+            "choices": [
+                {
+                    "text": "Can you help me find food?",
+                    "next_node": "node_002",
+                    "effects": {"relationship_olivia": 5},
+                    "inventory_add": ["canned food"],
+                    "conditions": {}
+                },
+                {
+                    "text": "I can handle myself.",
+                    "next_node": "node_003",
+                    "effects": {"relationship_olivia": -5},
+                    "conditions": {}
+                },
+                {
+                    "text": "You seem trustworthy. Any secrets around here?",
+                    "next_node": "node_004",
+                    "effects": {"relationship_olivia": 10},
+                    "inventory_add": ["map"],
+                    "conditions": {}
+                }
+            ]
+        },
+        {
+            "id": "node_002",
+            "speaker": "Olivia",
+            "text": "Here, take this canned food. It'll help you survive.",
+            "choices": [],
+            "inventory_add": ["canned food"]
+        },
+        {
+            "id": "node_003",
+            "speaker": "Olivia",
+            "text": "Alright, suit yourself. Stay safe out there.",
+            "choices": []
+        },
+        {
+            "id": "node_004",
+            "speaker": "Olivia",
+            "text": "You're sharp! There's an abandoned bunker nearby with supplies.",
+            "choices": [
+                {
+                    "text": "Let's go there now!",
+                    "next_node": "node_005",
+                    "conditions": {}
+                }
+            ]
+        },
+        {
+            "id": "node_005",
+            "speaker": "Olivia",
+            "text": "The bunker entrance is hidden. I hope you remember the map!",
+            "choices": []
+        }
+    ]
+}
